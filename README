@@ -1,0 +1,100 @@
+# EPI Generator
+
+A Streamlit web application for generating Evidence of Property Insurance (EPI) from Excel data. This application allows users to:
+
+1. Upload an Excel file containing insurance data
+2. Select a producer and corresponding EPI template
+3. Generate PDFs for each location in the SOV
+4. Download all PDFs as a ZIP file
+
+## Features
+
+- Easy-to-use web interface
+- Automatic template selection based on producer
+- Support for custom template paths
+- Progress tracking during PDF generation
+- Downloadable ZIP file with all generated EPIs
+
+## Requirements
+
+- Python 3.7+
+- See `requirements.txt` for all dependencies
+
+## Installation and Local Setup
+
+1. Clone this repository:
+```
+git clone https://github.com/yourusername/epi-generator.git
+cd epi-generator
+```
+
+2. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+3. Run the application locally:
+```
+streamlit run app.py
+```
+
+## Deployment on Render
+
+1. Create a new web service in Render
+2. Connect your GitHub repository
+3. Set the following:
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `streamlit run app.py`
+   - Environment Variables: Add `PYTHONUNBUFFERED=true`
+
+## Excel File Requirements
+
+The application expects an Excel file with the following sheets:
+- SOV (with header at row 11)
+- Property Coverage Information
+- Additional Remarks Page 1
+- Additional Remarks Page 2
+- Lenders
+
+Required columns in the SOV sheet:
+- Location Name
+- Entity Name
+- *Street Address
+- *City
+- *State Code
+- *Zip
+- *Real Property Value ($)
+- BI/Rental Income ($)
+
+Required columns in the Lenders sheet:
+- Location Name (must match the SOV sheet)
+- Lender Name
+- Street Address
+- Street Address 2 (optional)
+- City
+- State
+- Zipcode
+- Contract of Sale
+- Lenders Loss Payable
+- Loss Payee
+- Mortgagee
+- Other (Type in below)
+- Lender Additional Information 1-12 (optional)
+
+## Template Files
+
+The PDF templates should be placed in the same directory as the application. The default template naming convention is:
+- EPI Template - Garet Marr.pdf
+- EPI Template - Jared Kahhan.pdf
+- EPI Template - Matt Armstrong.pdf
+- EPI Template - Matt Harrell.pdf
+- EPI Template - Michael Shadeed.pdf
+- EPI Template - Custom Format.pdf
+
+## Customization
+
+You can update the template paths in the `template_options` dictionary in `app.py` if your templates have different filenames or locations.
+
+## License
+
+[Your License Here]
