@@ -1353,7 +1353,7 @@ def process_sov(file, template_path, producer):
                                 "Wind/Hail Yes": (wind_hail_yes, 264, 218),  # Adjusted y-axis to 230 - 12
                                 "Wind/Hail No": (wind_hail_no, 278, 218),    # Adjusted y-axis to 230 - 12
                                 "Wind/Hail NA": (wind_hail_na, 293, 218),    # Adjusted y-axis to 230 - 12
-                                "Wind/Hail Limit": (wind_hail_lim, 355, 218),  # Adjusted y-axis to 230 - 12
+                                "Wind/Hail Limit": (coverageamount, 355, 218),  # Adjusted y-axis to 230 - 12
                                 "Wind/Hail Deductible": (wind_hail_ded, 520, 219.5),  # Adjusted y-axis to 230 - 12
                                 "Wind/Hail y": (wind_hail_yes2, 103, 219),
                                 "Wind/Hail n": (wind_hail_no2, 135, 219),
@@ -1363,7 +1363,7 @@ def process_sov(file, template_path, producer):
                                 "Named Windstorm Yes": (named_windstorm_yes, 264, 206),  # Adjusted y-axis to 218 - 12
                                 "Named Windstorm No": (named_windstorm_no, 278, 206),    # Adjusted y-axis to 218 - 12
                                 "Named Windstorm NA": (named_windstorm_na, 293, 206),    # Adjusted y-axis to 218 - 12
-                                "Named Windstorm Limit": (named_windstorm_lim, 355, 206),  # Adjusted y-axis to 218 - 12
+                                "Named Windstorm Limit": (coverageamount, 355, 206),  # Adjusted y-axis to 218 - 12
                                 "Named Windstorm Deductible": (named_windstorm_ded, 520, 207.5),  # Adjusted y-axis to 218 - 12
                                 "Named Windstorm y": (named_windstorm_yes2, 103, 207),  # Adjusted y-axis to 218 - 12
                                 "Named Windstorm n": (named_windstorm_no2, 135, 207),   # Adjusted y-axis to 218 - 12
